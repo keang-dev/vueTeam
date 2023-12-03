@@ -10,12 +10,12 @@
         </li>
         <li class="nav-item">
           <a
-          @click="handleClick()"
+          
             class="nav-link"
-            href="#"
-            role="button"
+            href="/audit_create"
+            
           >
-            <i class="fas fa-th-large"></i>
+            <i class="fas fa-plus text-success">Audit Create</i>
           </a>
         </li>
       </ul>
