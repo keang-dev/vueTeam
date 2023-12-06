@@ -11,16 +11,22 @@
             ><i class="fas fa-bars"></i
           ></a>
         </li>
-        <!-- <li class="nav-item">
-          <a
-          
-            class="nav-link"
-            href="/audit_create"
-            
-          >
-            <i class="fas fa-plus text-success">Audit Create</i>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <div
+              class="fas fa-home text-success"
+              style="font-family: 'Khmer OS Battambang'"
+            >
+            <input
+              type="checkbox"
+              @click="handleDarkmode()"
+              value="1"
+              class="mr-1"
+            />
+              Dark Mode
+            </div>
           </a>
-        </li> -->
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
