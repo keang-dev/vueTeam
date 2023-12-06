@@ -39,10 +39,13 @@
               <tr v-if="audits.length == 0">
                 <td colspan="4" class="text-center">No Data</td>
               </tr>
-              <tr v-for="(audit, index) in audits" :key="audit.id">
-                <td>{{ index + 1 }}</td>
-                <td> <a href="/edit_audit">{{ audit.audit_code }}-{{ audit.auditperiod }}</a></td> 
-                <td><router-link :to="{ name : 'edit_audit', params : { audit_id : audit.audit_id } }" class="btn btn-sm btn-warning mr-1"><i class="fa fa-edit"></i></router-link></td>
+              <tr v-for="(audit) in audits" :key="audit.id">
+                <!-- <td>{{ index + 1 }}</td> -->
+                <td>
+                  <router-link :to="{ name : 'edit_audit', params : { audit_id : audit.audit_id } }" class="">{{ audit.audit_code }}-{{ audit.auditperiod }}</router-link>
+                   
+                   </td> 
+                <!-- <td><router-link :to="{ name : 'edit_audit', params : { audit_id : audit.audit_id } }" class="btn btn-sm btn-warning mr-1"><i class="fa fa-edit"></i></router-link></td> -->
               </tr>
             </tbody>
           </table>

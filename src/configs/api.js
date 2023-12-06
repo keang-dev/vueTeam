@@ -47,21 +47,45 @@ const paths = {
     create_user : '/user/store',
     delete_user : '/user/delete',
 
-    //staff
-    staff : '/staff',
-    update_staff : '/staff/update',
-    create_staff : '/staff/store',
-    delete_staff : '/staff/delete',
-    archive_staff : '/staff/archive',
-    archive_staff_back : '/staff/archive/back',
-    staff_bookmark : '/staff/bookmark',
-
-    //student
-    student : '/student',
-    edit_student : '/student/edit',
-    update_student : '/student/update',
-    create_student : '/student/store',
-    delete_student : '/student/delete',
-    import_excel : '/student/import'
+     //staff
+     staff : '/staff',
+     update_staff : '/staff/update',
+     create_staff : '/staff/store',
+     delete_staff : '/staff/delete',
+     archive_staff : '/staff/archive',
+     archive_staff_back : '/staff/archive/back',
+     staff_bookmark : '/staff/bookmark',
+     
+     unit : '/unit',
+     unit_delete : '/unit/delete',
+     domain : '/domain',
+     delete_domain : '/domain/delete',
+     update_domain : '/domain/update',
+     //Audit QA
+     audit_qa: '/audit/qa',
+     update_audit_qa : '/audit/qa/update',
+     create_audit_qa : '/audit/qa/store',
+     delete_audit_qa : '/audit/qa/delete',
+     //Delegation
+     delegation: '/delegation',
+     update_delegation : '/delegation/update',
+     create_delegation : '/delegation/store',
+     delete_delegation : '/delegation/delete',
+     //Delegation Role
+     delegation_role: '/delegation/role',
+     update_delegation_role : '/delegation/role/update',
+     create_delegation_role : '/delegation/role/store',
+     delete_delegation_role : '/delegation/role/delete',
+     //Entity
+      entity: '/entity',
+      update_entity : '/entity/update',
+      create_entity : '/entity/store',
+      delete_entity : '/entity/delete',
+     //Audit
+     audit: '/audit',
+     update_audit : '/audit/update',
+     create_audit : '/audit/store',
+     delete_audit : '/audit/delete',
+     audit1: '/audit/plan',
 }
 

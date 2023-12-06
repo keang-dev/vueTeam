@@ -49,62 +49,62 @@ function handleLi(e){
             icon : 'fa fa-home',
             isChild : false,
         },
-        {
-            name : 'Student',
-            route : { name : 'student' },
-            icon : 'fa fa-user',
-            isChild : false,
+        // {
+        //     name : 'Student',
+        //     route : { name : 'student' },
+        //     icon : 'fa fa-user',
+        //     isChild : false,
            
+        // },
+      {
+            name : 'staff',
+            route : { name : 'staff' },
+            icon : 'fa fa-users',
+            isChild : false,
         },
-    //   {
-    //         name : 'staff',
-    //         route : { name : 'staff' },
-    //         icon : 'fa fa-users',
-    //         isChild : false,
-    //     },
          
-        //  {
-        //     name : 'Data',
-        //     route : { name : 'data' },
-        //     icon : 'fa fa-cogs',
-        //     isChild : true,
-        //     components : 'unit|domain|audit_qa|delegation|entity|delegation_role',
+         {
+            name : 'Data',
+            route : { name : 'data' },
+            icon : 'fa fa-cogs',
+            isChild : true,
+            components : 'unit|domain|audit_qa|delegation|entity|delegation_role',
             
-        //     childs : [
-        //         {
-        //             name : 'unit',
-        //             route : { name : 'unit' },
-        //             icon : 'fa fa-book',
-        //             components : 'unit',
-        //         },
-        //         {
-        //             name : 'domain',
-        //             route : { name : 'domain'},
-        //             components : 'domain',
-        //             icon : 'far fa-circle',
+            childs : [
+                {
+                    name : 'unit',
+                    route : { name : 'unit' },
+                    icon : 'fa fa-book',
+                    components : 'unit',
+                },
+                {
+                    name : 'domain',
+                    route : { name : 'domain'},
+                    components : 'domain',
+                    icon : 'far fa-circle',
                     
-        //         },
-        //         {
-        //             name : 'Audit QA',
-        //             route : { name : 'audit_qa'},
-        //             components : 'audit_qa',
-        //             icon : 'far fa-circle',
+                },
+                {
+                    name : 'Audit QA',
+                    route : { name : 'audit_qa'},
+                    components : 'audit_qa',
+                    icon : 'far fa-circle',
                     
-        //         },
-        //          {
-        //             name : 'delegation',
-        //             route : { name : 'delegation'},
-        //             components : 'delegation',
-        //             icon : 'far fa-circle',
+                },
+                 {
+                    name : 'delegation',
+                    route : { name : 'delegation'},
+                    components : 'delegation',
+                    icon : 'far fa-circle',
                     
-        //         },
-        //          {
-        //             name : 'delegation_role',
-        //             route : { name : 'delegation_role'},
-        //             components : 'delegation_role',
-        //             icon : 'far fa-circle',
+                },
+                 {
+                    name : 'delegation_role',
+                    route : { name : 'delegation_role'},
+                    components : 'delegation_role',
+                    icon : 'far fa-circle',
                     
-        //         },
+                },
                   {
                     name : 'entity',
                     route : { name : 'entity'},
@@ -114,8 +114,8 @@ function handleLi(e){
                     
                 },
               
-        //     ]
-        // },
+            ]
+        },
      
         {
             name : 'Settings',

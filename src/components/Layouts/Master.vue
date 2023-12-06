@@ -133,10 +133,10 @@ async function handleLogout(){
 
 <style>
 
-.btnChange{
+/* .btnChange{
   position: absolute;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-}
+} */
 </style>
