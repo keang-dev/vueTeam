@@ -3,8 +3,9 @@ export function getPath(key){
     if(k.length >= 2){
         return paths.hasOwnProperty(k[0]) ? `${paths[k[0]]}?${k[1]}` : ''; 
     }
-    return paths.hasOwnProperty(key) ? paths[key] : '' ;
+    return paths.hasOwnProperty(key) ? `${paths[key]}?` : '' ;
 }
+
 
 
 const paths = {
@@ -18,9 +19,7 @@ const paths = {
     check_otp : '/check/otp',
 
     //permission
-    permission : '/permission1',
     permission : '/permission',
-
     update_permission : '/permission/update',
     create_permission : '/permission/store',
     delete_permission : '/permission/delete',
@@ -56,46 +55,13 @@ const paths = {
     archive_staff : '/staff/archive',
     archive_staff_back : '/staff/archive/back',
     staff_bookmark : '/staff/bookmark',
-    
-    unit : '/unit',
-    unit_delete : '/unit/delete',
-    domain : '/domain',
-    delete_domain : '/domain/delete',
-    update_domain : '/domain/update',
-    //Audit QA
-    audit_qa: '/audit/qa',
-    update_audit_qa : '/audit/qa/update',
-    create_audit_qa : '/audit/qa/store',
-    delete_audit_qa : '/audit/qa/delete',
-    //Delegation
-    delegation: '/delegation',
-    update_delegation : '/delegation/update',
-    create_delegation : '/delegation/store',
-    delete_delegation : '/delegation/delete',
-    //Delegation Role
-    delegation_role: '/delegation/role',
-    update_delegation_role : '/delegation/role/update',
-    create_delegation_role : '/delegation/role/store',
-    delete_delegation_role : '/delegation/role/delete',
-    //Entity
-     entity: '/entity',
-     update_entity : '/entity/update',
-     create_entity : '/entity/store',
-     delete_entity : '/entity/delete',
-    //Audit
-    audit: '/audit',
-    update_audit : '/audit/update',
-    create_audit : '/audit/store',
-    delete_audit : '/audit/delete',
-    audit1: '/audit/plan',
-    edit_audit: '/audit/plan/edit',
-      //student
-      student : '/student',
-      edit_student : '/student/edit',
-      update_student : '/student/update',
-      create_student : '/student/store',
-      delete_student : '/student/delete',
-      import_excel : '/student/import'
 
+    //student
+    student : '/student',
+    edit_student : '/student/edit',
+    update_student : '/student/update',
+    create_student : '/student/store',
+    delete_student : '/student/delete',
+    import_excel : '/student/import'
 }
 

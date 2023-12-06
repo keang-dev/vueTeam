@@ -6,8 +6,8 @@ import { alerts } from './alert.js'
 
 axios.defaults.baseURL = 'http://127.0.0.1:8000/api';
 axios.defaults.headers.common['Authorization'] = base64Decode(localStorage.getItem('token'));
-axios.defaults.headers.common['api_key'] = base64Encode('asdfg');
-axios.defaults.headers.common['type'] = base64Encode('cxz');
+axios.defaults.headers.common['api_key'] = base64Encode('abc');
+axios.defaults.headers.common['type'] = base64Encode('web');
 axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
 
 var lat = '';

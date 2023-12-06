@@ -13,7 +13,7 @@ export const auth = defineStore('auth', () => {
 
     function login(data){
         if(data.status == 'success'){
-            auth.value = data.data.user;
+            auth.value = data.data.user_data;
             token.value = `Bearer ${data.data.token}`;
             isAuth.value = true
 
