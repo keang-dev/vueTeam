@@ -1,14 +1,16 @@
-<template class="Body">
+<template>
     <Master>
       <Header> 
         <h2>Staff Page</h2> 
       </Header>
       <Body>
-        <div class="card">
+        <div class="card" v-if="false">
           <div class="card-body" v-if="is_permission">
             No Permission
           </div>
           <div class="card-body" v-else>
+            <textarea cols="30" rows="10" v-html="txt" class="form-control"></textarea>
+            <img :src="`${file}docs/BQbG0H98wbbMwsW4EbkE6AbQK8mVC0lma5IAZt3Q.jpg`" alt="" style="width: 200;">
             <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#createModal">
               <i class="fa fa-plus"></i> Create
             </button>
@@ -61,6 +63,7 @@
                       <i v-else class="fas fa-caret-up"></i> 
                     </th>
                     <th>Book Marks</th>
+                    <th>Photo</th>
                     <th> Action</th>
                   </tr>
                 </thead>
@@ -73,6 +76,9 @@
                       <td>{{ staff.phone }}</td>
                       <td>
                         <span v-if="staff.is_bookmark == 1" class="badge bg-danger">Marked</span>
+                      </td>
+                      <td>
+                        <img :src="`${file}${staff.photo}`" alt="" width="100">
                       </td>
                       <td>
                         <button type="button" class="btn btn-sm btn-dark mr-1" @click="handleBookmark($event,staff.id, staff.is_bookmark)">
@@ -186,16 +192,74 @@
           </div>
 
         </div>
-        <CreateUser @reloadPage="init()"/>
+        <div class="card">
+          <div class="card-header">
+            <div class="step-wrapper">
+              <div :class="`step ${step == 1 ? 'active' : ''}`" @click="step = 1">
+                <span>Step One</span>
+              </div>
+              <div :class="`step ${step == 2 ? 'active' : ''}`" v-if="step == 2 || step == 3" @click="step = 2">
+                <span>Step Two</span>
+              </div>
+              <div :class="`step ${step == 3 ? 'active' : ''}`" v-if="step == 3">
+                <span>Step Three</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body" v-show="step == 1">
+            <div class="row mb-3">
+              <div class="col-4">
+                <label>Step 1</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <button class="btn btn-sm btn-primary" @click="step = 2">Next Step</button>
+          </div>
+          <div class="card-body" v-show="step == 2">
+            <div class="row mb-3">
+              <div class="col-4">
+                <label>Step 1</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <button class="btn btn-sm btn-danger" @click="step = 1">Back</button>
+            <button class="btn btn-sm btn-primary" @click="step = 3">Next Step</button>
+          </div>
+          <div class="card-body" v-show="step == 3">
+            <div class="row mb-3">
+              <div class="col-4">
+                <label>Step 1</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <button class="btn btn-sm btn-danger" @click="step = 2">Back</button>
+          </div>
+        </div>
+        <CreateUser @reloadPage="reloadPage($event)"/>
         <EditUser :form="edit" :roles="roles" @reloadPage="init()"/>
       </Body>
     </Master>
   </template>
   
+
+<script setup>
+import { ref } from 'vue'
+const step = ref(1);
+
+
+</script>
+
+
+
+
+
   <script>
   import CreateUser from './create.vue'
   import EditUser from './edit.vue'
   import { usePermissionStore } from '../../stores/permission'
+  import { domain } from '../../configs/file'
+import axios from 'axios'
+import { ref } from 'vue'
   
   export default {
     components : {
@@ -203,6 +267,7 @@
     },
     data(){
       return {
+        file : domain,
         pagination : 3,
         orderBy : 'ASC',
         staffs : [],
@@ -220,7 +285,8 @@
         },
         filterBy : 'id',
         action : 'ASC',
-        is_bookmark : 'all'
+        is_bookmark : 'all',
+        txt : ''
       }
     },
     watch: {
@@ -236,13 +302,33 @@
       },
     },
     methods :{
-      fillterBy(column){
+      reloadPage(e){
+
+        this.txt = e;
+
+
+        this.init();
+      },
+      async fillterBy(column){
         this.filterBy = column;
         this.filter[column] = this.filter[column] == 'ASC' ? 'DESC' : 'ASC';
         this.action = this.filter[column];
 
         console.log(this.filterBy, this.action)
         this.init();
+
+        const res = await axios.get('http://localhost:8000/api/user');
+
+        console.log(res.data);
+        // {
+        //   headers : {
+        //     'Accept' : 'application/json',
+        //     'Authorization' : this.$base64Decode(localStorage.getItem('token')),
+        //     'type' : this.$base64Encode('web'),
+        //     "Content-Type" : 'application/json',
+        //     'api_key' : this.$base64Encode('abc')
+        //   }
+        // }
       },
       addStaff(){
         this.staffs.unshift({
@@ -363,7 +449,43 @@
     }
   }
   </script>
-  
-  <style>
-  
-  </style>
+
+
+<style>
+.step-wrapper {
+	 display: flex;
+}
+ .step {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 position: relative;
+	 width: 200px;
+	 height: 40px;
+	 font-family: Arial;
+	 color: green;
+	 background-color: white;
+}
+ .step.active {
+	 color: white;
+	 background-color: green;
+}
+ .step.active:after {
+	 background-color: green;
+}
+ .step:after {
+	 content: "";
+	 display: block;
+	 position: absolute;
+	 width: 28px;
+	 height: 28px;
+	 left: calc(100% - 15px);
+	 top: 50%;
+	 margin-top: -14px;
+	 background-color: white;
+	 transform: rotate(45deg);
+	 box-shadow: 1px -1px 0 0 #ccc;
+	 z-index: 5;
+}
+ 
+</style>

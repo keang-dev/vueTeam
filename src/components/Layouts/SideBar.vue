@@ -49,13 +49,13 @@ function handleLi(e){
             icon : 'fa fa-home',
             isChild : false,
         },
-        // {
-        //     name : 'Student',
-        //     route : { name : 'student' },
-        //     icon : 'fa fa-user',
-        //     isChild : false,
+        {
+            name : 'Student',
+            route : { name : 'student' },
+            icon : 'fa fa-user',
+            isChild : false,
            
-        // },
+        },
       {
             name : 'staff',
             route : { name : 'staff' },

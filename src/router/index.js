@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('@/views/students/create.vue'),
     },
     {
+      path: '/delegation/team',
+      name: 'delegation_team',
+      component: () => import('@/views/delegation_team/index.vue'),
+    },
+    {
       path: '/',
       name: 'home',
       component: HomeView,

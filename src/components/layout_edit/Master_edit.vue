@@ -11,16 +11,17 @@
             ><i class="fas fa-bars"></i
           ></a>
         </li>
-        <!-- <li class="nav-item">
+        <li class="nav-item" >
           <a
-          
             class="nav-link"
-            href="/audit_create"
-            
+            href="/"
           >
-            <i class="fas fa-plus text-success">Audit Create</i>
+          <div class="fas fa-home text-success" style="font-family: 'Khmer OS Battambang';">
+            
+              ទំព័រដើម
+          </div>
           </a>
-        </li> -->
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -70,7 +71,7 @@
       <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex"></div>
 
-        <SideBar />
+        <SideBarEdit />
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->
@@ -86,16 +87,7 @@
   </Body> -->
       <slot></slot>
     </div>
-    <footer class="main-footer">
-      <strong
-        >Copyright &copy; 2014-2021
-        <a href="https://adminlte.io">AdminLTE.io</a>.</strong
-      >
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-      </div>
-    </footer>
+    <Footer />
     <aside
       class="control-sidebar control-sidebar-dark"
       style="top: 57px; height: 368px; display: none"

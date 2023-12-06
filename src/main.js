@@ -9,6 +9,11 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+import Footer from '@/components/layout_edit/Footer.vue'
+import Master1 from '@/components/layout_edit/Master_edit.vue'
+import SideBarEdit from '@/components/layout_edit/SideBarEdit.vue'
+
+
 import Master from '@/components/Layouts/Master.vue'
 import Header from '@/components/UI/Header.vue'
 import Body from '@/components/UI/Body.vue'
@@ -24,6 +29,7 @@ import 'admin-lte/plugins/jquery/jquery.min.js'
 import 'admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js'
 import 'admin-lte/dist/js/adminlte.min.js'
 import axios from 'axios';
+import Login from '@/components/UI/Login.vue'
 
 // axios.defaults.baseURL = 'http://127.0.0.1:8000/api';
 // axios.defaults.headers.common['Authorization'] = base64Decode(localStorage.getItem('token'));
@@ -43,7 +49,15 @@ app.use(pinia)
 app.component('Master',Master)
 app.component('Header',Header)
 app.component('Body',Body)
+app.component('Footer',Footer)
+app.component('Master1',Master1)
+app.component('SideBarEdit',SideBarEdit)
+
+
 app.use(router)
 app.use(ToastPlugin)
+app.component('Login',Login)
+
+
 
 app.mount('#app')
