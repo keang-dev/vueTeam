@@ -11,17 +11,33 @@
             ><i class="fas fa-bars"></i
           ></a>
         </li>
-        <li class="nav-item" >
-          <a
-            class="nav-link"
-            href="/"
-          >
-          <div class="fas fa-home text-success" style="font-family: 'Khmer OS Battambang';">
-            
+        <li class="nav-item">
+          <a class="nav-link" href="/">
+            <div
+              class="fas fa-home text-success"
+              style="font-family: 'Khmer OS Battambang'"
+            >
               ទំព័រដើម
-          </div>
+            </div>
           </a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="">
+            <div
+              class="fas fa-home text-success"
+              style="font-family: 'Khmer OS Battambang'"
+            >
+            <input
+              type="checkbox"
+              @click="handleDarkmode()"
+              value="1"
+              class="mr-1"
+            />
+              Dark Mode
+            </div>
+          </a>
+        </li>
+        
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
