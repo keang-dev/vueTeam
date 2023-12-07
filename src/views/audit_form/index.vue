@@ -3,11 +3,11 @@
     <Header> </Header>
     <Body style="font-family: 'Khmer OS Battambang';">
       <div class="card">
-        <card-body class="ml-3">
+        <card-body class="">
           <div class="card-outline card-tabs">
             <div class="card-header p-0 pt-1 border-bottom-0">
               <ul class="nav" id="custom-tabs-three-tab" role="tablist">
-                <li class="nav-item row">
+                <li class="nav-item row ml-3">
                   <a
                     class="nav-link active"
                     id="custom-tabs-three-home-tab"
@@ -115,62 +115,7 @@
                       </div>
                     </div>
                   </a>
-                  <!-- <a class="nav-link  " id=" custom-tabs-three-05-tab" data-toggle="pill" href="#custom-tabs-three-05"
-                    role="tab" aria-controls="custom-tabs-three-04" aria-selected="true">
-                    <div class="bar1 text-center">
-                        <div class="progressbar1" style="width: 220px; height: 40px;">
-                            <div class="mt-2">
-                                <b class="mt-1">របាយការណ៍លទ្ធផលសវនកម្ម</b>
-                            </div>
-                        </div>
-
-                    </div>
-                </a> -->
-                  <!-- <a class="nav-link  " id=" custom-tabs-three-06-tab" data-toggle="pill" href="#custom-tabs-three-06"
-                    role="tab" aria-controls="custom-tabs-three-06" aria-selected="true">
-                    <div class="bar1 text-center">
-                        <div class="progressbar1" style="width: 200px; height: 40px;">
-                            <div class="mt-2">
-                                <b class="mt-1">ការបិទវគ្គសវនកម្ម</b>
-                            </div>
-                        </div>
-
-                    </div>
-                </a> -->
-                  <!-- <a class="nav-link  " id=" custom-tabs-three-07-tab" data-toggle="pill" href="#custom-tabs-three-07"
-                    role="tab" aria-controls="custom-tabs-three-07" aria-selected="true">
-                    <div class="bar1 text-center">
-                        <div class="progressbar1" style="width: 200px; height: 40px;">
-                            <div class="mt-2">
-                                <b class="mt-1">របាយការណ៍សវនកម្មបឋម</b>
-                            </div>
-                        </div>
-
-                    </div>
-                </a> -->
-                  <!-- <a class="nav-link  " id=" custom-tabs-three-08-tab" data-toggle="pill" href="#custom-tabs-three-08"
-                    role="tab" aria-controls="custom-tabs-three-08" aria-selected="true">
-                    <div class="bar1 text-center">
-                        <div class="progressbar1" style="width: 200px; height: 40px;">
-                            <div class="mt-2">
-                                <b class="mt-1">របាយការណ៍ឆ្លើយបំភ្លឺ២៨ថ្ងៃ</b>
-                            </div>
-                        </div>
-
-                    </div>
-                </a> -->
-                  <!-- <a class="nav-link  " id=" custom-tabs-three-09-tab" data-toggle="pill" href="#custom-tabs-three-09"
-                    role="tab" aria-controls="custom-tabs-three-09e" aria-selected="true">
-                    <div class="bar1 text-center">
-                        <div class="progressbar1" style="width: 200px; height: 40px;">
-                            <div class="mt-2">
-                                <b class="mt-1">របាយការណ៍សវនកម្មចុងក្រោយ</b>
-                            </div>
-                        </div>
-
-                    </div>
-                </a> -->
-                </li>
+                 </li>
 
                 <!-- <td>
                 <ul id="progress">
@@ -197,7 +142,9 @@
                   id="custom-tabs-three-home"
                   role="tabpanel"
                   aria-labelledby="custom-tabs-three-home-tab"
-                ></div>
+                >
+                <DeTeam />
+                </div>
 
                 <div
                   class="tab-pane fade"
@@ -249,7 +196,8 @@
   </Master1>
 </template>
   
-  <script setup>
+<script setup>
+import DeTeam from "@/views/audit_form/table/delegation_team.vue";
 import axios from "axios";
 import { onMounted, reactive } from "vue";
 import { AxiosApp } from "@/configs/service.js";

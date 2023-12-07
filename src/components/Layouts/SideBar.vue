@@ -49,19 +49,19 @@ function handleLi(e){
             icon : 'fa fa-home',
             isChild : false,
         },
-        {
-            name : 'Student',
-            route : { name : 'student' },
-            icon : 'fa fa-user',
-            isChild : false,
+    //     {
+    //         name : 'Student',
+    //         route : { name : 'student' },
+    //         icon : 'fa fa-user',
+    //         isChild : false,
            
-        },
-      {
-            name : 'staff',
-            route : { name : 'staff' },
-            icon : 'fa fa-users',
-            isChild : false,
-        },
+    //     },
+    //   {
+    //         name : 'staff',
+    //         route : { name : 'staff' },
+    //         icon : 'fa fa-users',
+    //         isChild : false,
+    //     },
          
          {
             name : 'Data',
@@ -71,48 +71,48 @@ function handleLi(e){
             components : 'unit|domain|audit_qa|delegation|entity|delegation_role',
             
             childs : [
-                {
-                    name : 'unit',
-                    route : { name : 'unit' },
-                    icon : 'fa fa-book',
-                    components : 'unit',
-                },
-                {
-                    name : 'domain',
-                    route : { name : 'domain'},
-                    components : 'domain',
-                    icon : 'far fa-circle',
+                // {
+                //     name : 'unit',
+                //     route : { name : 'unit' },
+                //     icon : 'fa fa-book',
+                //     components : 'unit',
+                // },
+                // {
+                //     name : 'domain',
+                //     route : { name : 'domain'},
+                //     components : 'domain',
+                //     icon : 'far fa-circle',
                     
-                },
-                {
-                    name : 'Audit QA',
-                    route : { name : 'audit_qa'},
-                    components : 'audit_qa',
-                    icon : 'far fa-circle',
+                // },
+                // {
+                //     name : 'Audit QA',
+                //     route : { name : 'audit_qa'},
+                //     components : 'audit_qa',
+                //     icon : 'far fa-circle',
                     
-                },
-                 {
-                    name : 'delegation',
-                    route : { name : 'delegation'},
-                    components : 'delegation',
-                    icon : 'far fa-circle',
+                // },
+                //  {
+                //     name : 'delegation',
+                //     route : { name : 'delegation'},
+                //     components : 'delegation',
+                //     icon : 'far fa-circle',
                     
-                },
-                 {
-                    name : 'delegation_role',
-                    route : { name : 'delegation_role'},
-                    components : 'delegation_role',
-                    icon : 'far fa-circle',
+                // },
+                //  {
+                //     name : 'delegation_role',
+                //     route : { name : 'delegation_role'},
+                //     components : 'delegation_role',
+                //     icon : 'far fa-circle',
                     
-                },
-                  {
-                    name : 'entity',
-                    route : { name : 'entity'},
-                    components : 'entity',
-                    icon : 'far fa-circle',
-                    color: 'text-red',
+                // },
+                //   {
+                //     name : 'entity',
+                //     route : { name : 'entity'},
+                //     components : 'entity',
+                //     icon : 'far fa-circle',
+                //     color: 'text-red',
                     
-                },
+                // },
               
             ]
         },
@@ -124,36 +124,36 @@ function handleLi(e){
             isChild : true,
             components : 'user|role|config|permission|permission_feature|role_permission',
             childs : [
-                {
-                    name : 'Permission',
-                    route : { name : 'permission'},
-                    components : 'permission|permission_feature',
-                    icon : 'far fa-circle',
-                },
-                {
-                    name : 'Role',
-                    route : { name : 'role'},
-                    components : 'role|role_permission',
-                    icon : 'far fa-circle',
-                },
-                {
-                    name : 'User',
-                    route : { name : 'user'},
-                    components : 'user',
-                    icon : 'far fa-circle',
-                },
-                {
-                    name : 'Config',
-                    route : { name : 'config'},
-                    components : 'config',
-                    icon : 'far fa-circle',
-                },
-                 {
-                    name : 'Api Key',
-                    route : { name : 'api_key'},
-                    components : 'api_key',
-                    icon : 'far fa-circle',
-                },
+                // {
+                //     name : 'Permission',
+                //     route : { name : 'permission'},
+                //     components : 'permission|permission_feature',
+                //     icon : 'far fa-circle',
+                // },
+                // {
+                //     name : 'Role',
+                //     route : { name : 'role'},
+                //     components : 'role|role_permission',
+                //     icon : 'far fa-circle',
+                // },
+                // {
+                //     name : 'User',
+                //     route : { name : 'user'},
+                //     components : 'user',
+                //     icon : 'far fa-circle',
+                // },
+                // {
+                //     name : 'Config',
+                //     route : { name : 'config'},
+                //     components : 'config',
+                //     icon : 'far fa-circle',
+                // },
+                //  {
+                //     name : 'Api Key',
+                //     route : { name : 'api_key'},
+                //     components : 'api_key',
+                //     icon : 'far fa-circle',
+                // },
             ]
         }
     ]);

@@ -21,7 +21,7 @@
             </div>
           </a>
         </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
           <a class="nav-link" href="">
             <div
               class="fas fa-home text-success"
@@ -36,7 +36,7 @@
               Dark Mode
             </div>
           </a>
-        </li>
+        </li> -->
         
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -58,6 +58,20 @@
               ><i class="right fa fa-caret-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
+                <li class="nav-item ml-3">
+                <div
+                  class="fas fa-home text-success"
+                  style="font-family: 'Khmer OS Battambang'"
+                >
+                  <input
+                    type="checkbox"
+                    @click="handleDarkmode()"
+                    value="1"
+                    class="mr-1"
+                  />
+                  Dark Mode
+                </div>
+              </li>
               <div class="dropdown-divider"></div>
               <a href="" class="dropdown-item">
                 <i class="fa fa-user text-info mr-2"></i> Profile
