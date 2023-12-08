@@ -152,7 +152,7 @@
                   role="tabpanel"
                   aria-labelledby="custom-tabs-three-01-tab"
                 >
-                 ១
+                 <AuditeeInfor />
                 </div>
                 <div
                   class="tab-pane fade"
@@ -198,6 +198,8 @@
   
 <script setup>
 import DeTeam from "@/views/audit_form/table/delegation_team.vue";
+import AuditeeInfor from "@/views/audit_form/table/auditee_infor/index.vue";
+
 import axios from "axios";
 import { onMounted, reactive } from "vue";
 import { AxiosApp } from "@/configs/service.js";

@@ -30,7 +30,7 @@ const router = createRouter({
       component: () => import('@/views/delegation_team/index.vue'),
     },
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: HomeView,
     },
@@ -111,7 +111,7 @@ const router = createRouter({
       component: () => import('@/views/api_keys/index.vue'),
     },
     {
-      path: '/audit2',
+      path: '/',
       name: 'audit2',
       component: () => import('@/views/audit_plan/index.vue'),
     },

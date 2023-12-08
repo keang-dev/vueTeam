@@ -25,7 +25,7 @@
                         >
                           <div class="mt-2">
                             <i class="fa fa-users mr-1"></i>
-                            <b class="mt-1">ក្រុមប្រតិភូ</b>
+                            <b class="mt-1">ក្រុមប្រតិភូ111111</b>
                           </div>
                         </div>
                       </div>
@@ -110,7 +110,7 @@
                         style="width: 200px; height: 40px"
                       >
                         <div class="mt-2">
-                          <b class="mt-1">ដដដ</b>
+                          <b class="mt-1">1111</b>
                         </div>
                       </div>
                     </div>
@@ -152,7 +152,7 @@
                   role="tabpanel"
                   aria-labelledby="custom-tabs-three-01-tab"
                 >
-                 ១
+                  <AuditeeInfor />
                 </div>
                 <div
                   class="tab-pane fade"
@@ -160,7 +160,7 @@
                   role="tabpanel"
                   aria-labelledby="custom-tabs-three-02-tab"
                 >
-                ២
+                1
                 </div>
                 <div
                   class="tab-pane fade"
@@ -198,6 +198,8 @@
   
 <script setup>
 import DeTeam from "@/views/audit_form/table/delegation_team.vue";
+import AuditeeInfor from "@/views/audit_form/table/auditee_infor/index.vue";
+
 import axios from "axios";
 import { onMounted, reactive } from "vue";
 import { AxiosApp } from "@/configs/service.js";
