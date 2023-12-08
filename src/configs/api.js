@@ -87,5 +87,16 @@ const paths = {
      create_audit : '/audit/store',
      delete_audit : '/audit/delete',
      audit1: '/audit/plan',
+     dashboard: '/dashboard',
+     edit_dashboard: '/dashboard/edit',
+
+
+      //student
+    student : '/student',
+    edit_student : '/student/edit',
+    update_student : '/student/update',
+    create_student : '/student/store',
+    delete_student : '/student/delete',
+    import_excel : '/student/import'
 }
 

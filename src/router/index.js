@@ -111,6 +111,16 @@ const router = createRouter({
       component: () => import('@/views/api_keys/index.vue'),
     },
     {
+      path: '/audit2',
+      name: 'audit2',
+      component: () => import('@/views/audit_plan/index.vue'),
+    },
+    {
+      path: '/audit2/edit/:audit_id',
+      name: 'edit_audit2',
+      component: () => import('@/views/audit_plan/edit.vue'),
+    },
+    {
       path: '/config',
       name: 'config',
       component: Config,
