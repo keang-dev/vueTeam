@@ -45,7 +45,7 @@ function handleLi(e){
     const sidebars = ref([
         {
             name : 'Dashboard',
-            route : { name : 'home' },
+            route : { name : 'audit2' },
             icon : 'fa fa-home',
             isChild : false,
         },
@@ -56,13 +56,7 @@ function handleLi(e){
             isChild : false,
            
         },
-         {
-            name : 'Audit',
-            route : { name : 'audit2' },
-            icon : 'fa fa-user',
-            isChild : false,
-           
-        },
+        
     //   {
     //         name : 'staff',
     //         route : { name : 'staff' },

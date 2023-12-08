@@ -89,6 +89,7 @@ const paths = {
      audit1: '/audit/plan',
      dashboard: '/dashboard',
      edit_dashboard: '/dashboard/edit',
+     delegation_team: '/dashboard/delegation_team',
 
 
       //student

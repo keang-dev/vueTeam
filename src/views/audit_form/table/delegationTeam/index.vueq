@@ -1,21 +1,17 @@
-<template class="Body">
-    <Master1>
-      <Header> 
-        <h2>Delegation Role Page</h2> 
-      </Header>
-      <Body>
-        <div class="card"> 
+<template>
+<DeTeamCreate />
+ <div class="card"> 
           <div class="card-body">
-            <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#createModal">
+            <!-- <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#createModal">
               <i class="fa fa-plus"></i> Create
-            </button>
+            </button> -->
             <table class="table table-bordered table-sm table hover">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Name(KH)</th>
-                  <th>Name(EN)</th>
-                  <th>Action</th>
+                  <th>ល.រ</th>
+                  <th>ឈ្មោះ</th>
+                  <th>តួនាទី</th>
+                  <th>សកម្មភាព</th>
                 </tr>
               </thead>
               <tbody>
@@ -52,20 +48,20 @@
             </div>
           </div>
         </div>
-        <CreateUser @reloadPage="init()"/>
-        <EditUser :form="edit" @reloadPage="init()"/>
-      </Body>
-    </Master1>
-  </template>
-  
-  <script>
-  import CreateUser from './create.vue'
-  import EditUser from './edit.vue'
+</template>
+
+<script setup>
+import DeTeamCreate from "@/views/audit_form/table/delegationTeam/create.vue";
+
+</script>
+ <script>
+  // import CreateUser from './create.vue'
+  // import EditUser from './edit.vue'
   
   export default {
-    components : {
-      CreateUser , EditUser
-    },
+    // components : {
+    //   CreateUser , EditUser
+    // },
     data(){
       return {
         delegation_roles : [],
@@ -130,7 +126,6 @@
     }
   }
   </script>
-  
-  <style>
-  
-  </style>
+<style>
+
+</style>
